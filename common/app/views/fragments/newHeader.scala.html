@@ -14,8 +14,6 @@
     </li>
 }
 
-@fragments.nav.newHeaderMenu()
-
 <header class="@Atomise("New-header")" role="banner" data-link-name="global navigation: new header">
     <div class="new-header__inner gs-container">
         <a href="@LinkTo{/}" class="new-header__logo-wrapper" tabindex="0">
@@ -26,16 +24,18 @@
         @fragments.nav.editionPicker()
 
         <nav class="new-header__nav">
-            <a href="#main-menu" class="new-header__nav__menu-button js-change-link" tabindex="0">
-                <i class="new-header__veggie-burger-icon">
-                </i>
+            <input type="checkbox" id="new-header__nav__checkbox">
+            <label for="new-header__nav__checkbox" class="new-header__nav__menu-button js-change-link" tabindex="0">
+                <i class="new-header__veggie-burger-icon"></i>
                 <span class="u-h">Menu</span>
-            </a>
+            </label>
             <ul class="new-header__nav__list">
                 @NewNavigation.topLevelSections.map { section =>
                     @primaryLinks(section.name)
                 }
             </ul>
+            @fragments.nav.newHeaderMenu()
         </nav>
     </div>
 </header>
+

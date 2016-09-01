@@ -129,7 +129,7 @@ define([
 
             initialiseNavigation: function () {
                 navigation.init();
-                newHeaderNavigation();
+                //newHeaderNavigation();
             },
 
             showTabs: function () {

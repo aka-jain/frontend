@@ -23,18 +23,18 @@ $mobile-medium: 375px; // Breakpoint for our most common device sizes
     @include mq($until: $mobile-medium) {
         width: 170px;
         // height: auto doesn't work in Safari
-        height: calc(3/16 * 170px);
+        height: calc(3 / 16 * 170px);
     }
 
     @include mq($from: $mobile-medium, $until: mobileLandscape) {
         width: 225px;
-        height: calc(3/16 * 225px);
+        height: calc(3 / 16 * 225px);
     }
 
     @include mq(mobileLandscape) {
         width: 260px;
         // height: auto doesn't work in Safari
-        height: calc(3/16 * 260px);
+        height: calc(3 / 16 * 260px);
         padding: ($gs-baseline / 2) ($gs-gutter / 2) 0;
         margin-right: $gs-gutter / 2;
     }
@@ -350,7 +350,7 @@ $gutter-large: 55px;
     left: 0;
     line-height: 1;
     z-index: $zindex-modal;
-
+    /***********
     .js-on & {
         &:not(.shown) {
             display: none;
@@ -362,6 +362,7 @@ $gutter-large: 55px;
             display: none;
         }
     }
+    *************/
 }
 
 .main-menu-container__overlay {
@@ -375,6 +376,7 @@ $gutter-large: 55px;
     // Without this, in Safari/IOS this element appears above the menu
     z-index: -1;
 
+    //TODO: is this used?
     .main-menu-container.off-screen & {
         opacity: 0;
         transition: opacity .4s cubic-bezier(.23, 1, .32, 1);
@@ -416,6 +418,22 @@ $gutter-large: 55px;
         transform: translateX(-110%);
         transition: transform .4s cubic-bezier(.23, 1, .32, 1);
     }
+}
+
+#new-header__nav__checkbox {
+    display: none;
+}
+
+#new-header__nav__checkbox ~ .main-menu-container {
+    display: none;
+}
+
+#new-header__nav__checkbox:checked ~ .main-menu-container {
+    display: block;
+}
+
+#new-header__nav__checkbox:checked ~ .new-header__nav__menu-button {
+    z-index: 1031;
 }
 
 .main-navigation {
