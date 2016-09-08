@@ -175,7 +175,7 @@ $gutter-large: 55px;
     // Override a from _lists.scss
     color: #ffffff;
     padding-left: .3em;
-    padding-right:.07em;
+    padding-right: .07em;
     display: inline-block;
     cursor: pointer;
 
@@ -354,7 +354,7 @@ $gutter-large: 55px;
     transition: opacity .2s cubic-bezier(.23, 1, .32, 1);
     // Without this, in Safari/IOS this element appears above the menu
     z-index: 2;
-    display:none;
+    display: none;
 }
 
 .main-menu-container__menu {
@@ -397,12 +397,12 @@ $gutter-large: 55px;
 #new-header__nav__checkbox {
     display: none;
 }
-#new-header__nav__checkbox ~ .main-menu-container{
+#new-header__nav__checkbox ~ .main-menu-container {
     transform: translateX(-110%);
     transition: transform .4s cubic-bezier(.23, 1, .32, 1);
 }
 
-#new-header__nav__checkbox:checked ~  .main-menu-container{
+#new-header__nav__checkbox:checked ~  .main-menu-container {
     transform: translateX(0%);
     transition: transform .4s cubic-bezier(.23, 1, .32, 1);
 }
@@ -414,7 +414,7 @@ $gutter-large: 55px;
 #new-header__nav__checkbox:checked ~ .main-menu-container__overlay {
     opacity: 1;
     transition: opacity .4s cubic-bezier(.23, 1, .32, 1);
-    display:block;
+    display: block;
 }
 
 #new-header__nav__checkbox:checked ~ .new-header__nav__menu-button {
